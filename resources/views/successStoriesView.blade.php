@@ -21,7 +21,7 @@
             }
 
            
-            .links > a {
+            .links > a{
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 12px;
@@ -40,6 +40,7 @@
 
 
             .m-b-md {
+                margin: 10px;
                 margin-bottom: 30px;
             }
             li{
@@ -63,21 +64,27 @@
 
                 </div>
             @endif
+            
                 <div class="content">
-                    <div class="title m-b-md" style="width:4500px; color: white; align-content: left;">
+                    <div class="title m-b-md" style="width:8100px; color: white; align-content: left;">
                     <marquee
-                    behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="30">
+                    behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="20">
                     
                  <ul> 
+                  <br><br>
                      @foreach($stories as $myStory)
                        
                     
-                        <li style="font-family: arial; overflow: hidden; color:white" onmouseover="style.fontWeight = 'bold'" onmouseout="style.fontWeight = 'normal'" >
+                        <li style="font-family: arial; overflow: hidden; color: #A6ACAF" onmouseover="style.color='#F0F3F4'; style.fontWeight='bold'" onmouseout="style.color='#A6ACAF'; style.fontWeight='normal'" >
+
                         <div style="background-color: #212F3C; border-style: solid;"><p style="color: red; font-size: 30px;"><b>&nbsp;&nbsp; {{$myStory->donorName}}</b></p>
                        
-                        <p style="word-wrap: break-word;" >&nbsp;&nbsp;{{$myStory->message}}</p>
-                         <p align="left"> &nbsp;&nbsp;<u>DONATED ON:</u>  {{$myStory->dateOfDonation}}</p>
-                        <div align="left">&nbsp;&nbsp;<u>FOR:</u>  {{$myStory->hospitalName}}</div></div>
+                        <p style="word-wrap: break-word;" >&nbsp;&nbsp;
+                        <textarea rows="10" cols="25" style="background-color: #212F3C; font-size: 25px; color: #A6ACAF; overflow:hidden;" onmouseover="style.color='#F0F3F4'; style.fontWeight='bold'" onmouseout="style.color='#A6ACAF'; style.fontWeight='normal'">{{$myStory->message}}</textarea></p>
+
+                         <p align="left"> &nbsp;&nbsp;<u>DONATED ON:</u> &nbsp; {{$myStory->dateOfDonation}}</p>
+
+                        <div align="left">&nbsp;&nbsp;<u>FOR:</u>&nbsp;  {{$myStory->hospitalName}}</div></div>
                         <br>
                          </li> @endforeach
                         </ul>
