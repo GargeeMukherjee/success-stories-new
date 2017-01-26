@@ -11,7 +11,7 @@ class myController extends Controller
     public function story(){
     	//$stories=story::all();
 
-        $stories = story::orderBy('created_at', 'desc')->take(10)->get();
+        $stories = story::orderBy('created_at', 'desc')->take(20)->get();
                         
 
     	return view('successStoriesView',compact('stories'));
