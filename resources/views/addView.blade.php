@@ -60,11 +60,13 @@ function textCounter(field,field2,maxlimit)
 
 	<input name="dateOfDonation" id="dateOfDonation" type="date" class="form-control" required>
 		<br>
+   HOSPITAL NAME<input name="hospitalName" id="hospitalName" type="text" class="form-control" required>
+  <br>
 
 	ANY MESSAGE YOU WANNA SHARE
 	
-<textarea onkeyup="textCounter(this,'counter',500);" class="form-control" name="message" id="message" required>
-</textarea><input disabled  maxlength="3" size="3" value="500" id="counter" style="float:right;">
+<textarea onkeyup="textCounter(this,'counter',200);" class="form-control" name="message" id="message" required>
+</textarea><input disabled  maxlength="3" size="3" value="200" id="counter" style="float:right;">
 
 
 		<br>
